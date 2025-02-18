@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Contact - AJITEKRY CAR</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .contact-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: #d32f2f;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .contact-form button:hover {
+            background: #b71c1c;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: center; align-items: center; padding: 20px 50px; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; color: white; height: 80px; background: rgba(0, 0, 0, 0.5);">
+        <div class="logo-container" style="position: absolute; left: 50px; background: rgba(238, 238, 238, 0.7); padding: 10px 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+            <img href="index.html" src="assets/images/logo.png" alt="AJITEKRY CAR" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="display: flex; list-style: none; gap: 30px; padding: 0; margin: 0;">
+                <li><a href="index.html">ACCEUIL</a></li>
+                <li><a href="apropos.html">A PROPOS</a></li>
+                <li><a href="vehicles.html">NOS VEHICULES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="choix" style="padding: 60px 20px; text-align: center; color: white; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+        <div class="choix-content" style="position: relative; z-index: 2;">
+            <h2 style="font-size: 36px; font-weight: bold; color: #D84040; text-transform: uppercase; margin-bottom: 20px;">
+                Contact
+            </h2>
+        </div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/images/1.jpg') no-repeat center center/cover; z-index: 0;"></div>
+    </section>
+
+    <div class="contact-section">
+        <h2>Contactez-nous</h2>
+        <form class="contact-form" id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+            
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="phone" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" rows="5" required></textarea>
+          
+            <button type="submit">Envoyer</button>
+        </form>
+
+        
+
+        <!-- Google Maps -->
+        <iframe class="map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.3333333333335!2d-7.6000000000000005!3d33.60000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sCarRentCasa!5e0!3m2!1sfr!2sma!4v1618578987654!5m2!1sfr!2sma" 
+            allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+    <script>
+        (function() {
+            emailjs.init("C1piOmDLp53mBodyj"); // Ton User ID
+        })();
+    
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let message = document.getElementById("message").value;
+    
+            // Make sure these field names match the placeholders in your EmailJS template
+            let params = {
+    from_name: name,
+    from_email: email,
+    from_phone: phone,  // Change phone_number to from_phone
+    message: message
+};
+
+    
+            emailjs.send("AjiTekry", "template_7jz10ob", params)
+            .then(function(response) {
+                alert("Message envoyé avec succès !");
+                document.getElementById("contact-form").reset();
+            })
+            .catch(function(error) {
+                alert("Erreur lors de l'envoi : " + error.text);
+            });
+        });
+    </script>
+    <section class="reservation-section" style="
+    background: url('assets/images/lo.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    ">
+    <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px;">
+        LOCATION DE VOITURES OU MAROC - <br>
+        DÉCOUVREZ LA LIBERTÉ DE LA ROUTE <br>
+        GRÂCE À NOTRE FLOTTE DIVERSIFIÉE.
+    </h2>
+    <div>
+        <a href="https://wa.link/w1wv29" style="
+            display: inline-block;
+            padding: 15px 20px;
+            background: #25d366;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        ">
+            RÉSERVER VIA WHATSAPP
+        </a>
+        <a href="tel:+212 661-690-035" style="
+            display: inline-block;
+            padding: 15px 20px;
+            background: #d32f2f;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+        ">
+            APPELER POUR RÉSERVER
+        </a>
+    </div>
+    </section>
+      
+    <footer style="background: #000000; color: white; padding: 60px 20px; text-align: left; font-size: 18px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+    
+            <div style="max-width: 350px;">
+                <img src="assets/images/logo2.png" alt="AJITEKRY CAR" style="max-width: 220px; margin-bottom: 20px;">
+                <p style="color: #b0b0b0; line-height: 1.6;">
+                    Découvrez l'excitation de la route et la liberté d'explorer notre gamme variée de véhicules de location de qualité supérieure, à Casablanca.
+                </p>
+                <p style="color: #b0b0b0; font-weight: bold;">
+                    <i class="fas fa-clock" style="color: #d32f2f;"></i> Disponible 24/24h, 7/7 jours
+                </p>
+            </div>
+    
+            
+            <div>
+                <h3 style="color: #fff; font-size: 22px; font-weight: bold; margin-bottom: 15px;">MENU DE NAVIGATION</h3>
+                <ul style="list-style: none; padding: 0; line-height: 2;">
+                    <li><a href="index.html" style="color: #b0b0b0; text-decoration: none;">Accueil</a></li>
+                    <li><a href="apropos.html" style="color: #b0b0b0; text-decoration: none;">À Propos</a></li>
+                    <li><a href="vehicles.html" style="color: #b0b0b0; text-decoration: none;">Nos véhicules</a></li>
+                    <li><a href="contact.html" style="color: #b0b0b0; text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 style="color: #fff; font-size: 22px; font-weight: bold; margin-bottom: 15px;">CONTACTEZ-NOUS</h3>
+                <p style="color: #b0b0b0; line-height: 1.6;">N 11 HEY NAHDA 1 RUE MEKNES OULED TEIMA </p>
+                <p style="color: #d32f2f; font-weight: bold; font-size: 20px;">
+                    <i class="fas fa-phone-alt"></i> +212 661-690-035
+                </p>
+                <p style="color: #d32f2f; font-weight: bold; font-size: 20px;">
+                    <i class="fas fa-phone-alt"></i> +212 601-649-501
+                </p>
+                <p style="color: #b0b0b0; font-size: 18px;">
+                    <i class="fas fa-envelope"></i> ajitekri201@gmail.com
+            </div>
+    
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; border-top: 1px solid #1f2f35; margin-top: 30px; padding-top: 20px; font-size: 16px; color: #b0b0b0;">
+            © 2024 AJITEKRY CAR - Tous droits réservés
+        </div>
+    </footer>
+
+</body>
+</html>

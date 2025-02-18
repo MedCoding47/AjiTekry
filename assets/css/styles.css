@@ -1,0 +1,184 @@
+/* Styles généraux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    font-size: 16px; /* Taille de base pour les unités rem */
+}
+
+/* Style du header avec image de fond */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Réduire le padding sur les petits écrans */
+    background: url('assets/images/1.jpg') no-repeat center center/cover;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: white;
+    height: 60px; /* Réduire la hauteur sur les petits écrans */
+}
+
+.logo img {
+    height: 35px; /* Réduire la taille du logo sur les petits écrans */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px; /* Réduire l'espacement entre les éléments du menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #EEEE;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    font-size: 0.9rem; /* Taille de police plus petite sur les petits écrans */
+}
+
+/* Effet hover sur les liens de navigation */
+nav ul li a:hover {
+    color: #D84040; /* Changement de couleur au survol */
+}
+
+/* Section Hero avec image de fond */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: url('assets/images/1.jpg') no-repeat center center/cover;
+    position: relative;
+    width: 100%;
+    padding: 20px; /* Ajouter du padding pour les petits écrans */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Taille de police réduite pour les petits écrans */
+    margin: 10px 0;
+}
+
+.hero h3 {
+    font-size: 1.2rem; /* Taille de police réduite pour les petits écrans */
+    color: #f5a623;
+}
+
+.hero p {
+    font-size: 1rem; /* Taille de police réduite pour les petits écrans */
+}
+
+/* Bouton de réservation */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5a623;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; /* Taille de police réduite pour les petits écrans */
+    border-radius: 5px;
+    margin-top: 20px; /* Espacement supplémentaire pour les petits écrans */
+}
+
+.btn:hover {
+    background-color: #e08e1d;
+}
+
+/* Style du footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem; /* Taille de police réduite pour les petits écrans */
+}
+
+/* Media Queries pour le responsive design */
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Réduire le padding */
+        height: 50px; /* Réduire la hauteur */
+    }
+
+    .logo img {
+        height: 25px; /* Réduire la taille du logo */
+    }
+
+    nav ul li {
+        margin: 0 8px; /* Réduire l'espacement entre les éléments du menu */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Taille de police réduite */
+    }
+
+    .hero h3 {
+        font-size: 1rem; /* Taille de police réduite */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Taille de police réduite */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Taille de police réduite */
+        padding: 8px 16px; /* Réduire le padding */
+    }
+}
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 480px) {
+    header {
+        padding: 5px; /* Réduire le padding */
+        height: 40px; /* Réduire la hauteur */
+    }
+
+    .logo img {
+        height: 30px; /* Réduire la taille du logo */
+    }
+
+    nav ul {
+        flex-direction: column; /* Afficher le menu verticalement */
+        align-items: flex-end; /* Aligner le menu à droite */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Réduire l'espacement entre les éléments du menu */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Taille de police réduite */
+    }
+
+    .hero h3 {
+        font-size: 0.9rem; /* Taille de police réduite */
+    }
+
+    .hero p {
+        font-size: 0.8rem; /* Taille de police réduite */
+    }
+
+    .btn {
+        font-size: 0.8rem; /* Taille de police réduite */
+        padding: 6px 12px; /* Réduire le padding */
+    }
+
+    footer {
+        padding: 10px; /* Réduire le padding */
+        font-size: 0.8rem; /* Taille de police réduite */
+    }
+}

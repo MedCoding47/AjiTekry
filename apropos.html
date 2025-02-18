@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJITEKRY CAR - Location de Voitures</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script defer src="assets/js/script.js"></script>
+
+    <style>
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background: #D84040;
+            color: rgb(255, 255, 255);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Hover Effect on WhatsApp Button */
+        .btn:hover {
+            background: #8c8989;  /* Slightly lighter brown */
+            color: white;
+            transform: scale(1.05);  /* Small zoom effect */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style pour la section About */
+        .about-content {
+            display: flex;
+            align-items: flex-start; /* Alignement en haut */
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .about-text h2 {
+            font-size: 48px; /* Grand texte à gauche */
+            font-weight: bold;
+            color: #D84040;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-description {
+            flex: 1;
+            text-align: left; /* Texte à droite */
+            padding-left: 40px; /* Espacement entre le titre et le texte */
+        }
+
+        .about-description p {
+            font-size: 18px; /* Petit texte à droite */
+            color: #333;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .about-description strong {
+            font-size: 24px; /* Texte en gras plus grand */
+            color: #D84040;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: right;
+            padding-left: 40px; /* Espacement entre le texte et l'image */
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: center; align-items: center; padding: 20px 50px; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; color: white; height: 80px; background: rgba(0, 0, 0, 0.5);">
+        <div class="logo-container" style="position: absolute; left: 50px; background: rgba(238, 238, 238, 0.7); padding: 10px 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+            <img href="index.html" src="assets/images/logo.png" alt="AJITEKRY CAR" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="display: flex; list-style: none; gap: 30px; padding: 0; margin: 0;">
+                <li><a href="index.html">ACCEUIL</a></li>
+                <li><a href="apropos.html">A PROPOS</a></li>
+                <li><a href="vehicles.html">NOS VEHICULES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Nouvelle Section About -->
+    <section id="about" style="padding: 60px 20px; background: url('assets/images/stylish-elegant-woman-car-salon.jpg') no-repeat center center/cover; background-size: cover; position: relative;">
+        <div class="about-content" style=" padding: 20px; border-radius: 10px; position: relative; z-index: 2;">
+            <div class="about-text">
+                <h2 style="color:#d32f2f;">
+                    AJITEKRY CAR <br> MAROC 
+                </h2>
+            </div>
+            <div class="about-description">
+                <p style="color: #eeeeee;">
+                    <strong style="color: #d32f2f;">LOUEZ VOTRE VOITURE CHEZ AJITEKRY CAR DÈS AUJOURD’HUI</strong><br><br>
+                    Ajitekry Car pour la location de voitures dans toute le Maroc. Que ce soit pour un voyage d’affaires ou des vacances, nous offrons un vaste choix de voitures économiques, de SUV spacieux et de véhicules de luxe. Notre priorité est de rendre votre expérience de location simple et pratique, grâce à un processus de réservation en ligne rapide et à des véhicules adaptés à tous vos besoins.
+                </p>
+                <a href="contact.html" class="btn" style="margin-top: 30px;">
+                    CONTACTEZ-NOUS
+                </a>
+            </div>
+        </div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3);"></div>
+    </section>
+    
+    
+
+<!-- Nouvelle Section Choix de Voitures -->
+<!-- Nouvelle Section Choix de Voitures -->
+
+<section style="padding: 50px 20px; text-align: center; background: #f8f8f8;">
+    <h2 style="color: #d32f2f; font-size: 28px; margin-bottom: 20px;">Pourquoi choisir AJITEKRY CAR ?</h2>
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+            <i class="fas fa-map-marker-alt" style="font-size: 40px; color: #d32f2f; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 20px; color: #333;">Livraison Partout au Maroc</h3>
+            <p style="font-size: 14px; color: #666;">Nous livrons votre voiture de location à n'importe quel endroit, y compris les grands aéroports des grandes villes.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+            <i class="fas fa-car" style="font-size: 40px; color: #d32f2f; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 20px; color: #333;">Véhicules Bien Entretenus</h3>
+            <p style="font-size: 14px; color: #666;">Notre flotte est régulièrement révisée pour garantir une conduite fluide et sécurisée.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+            <i class="fas fa-spray-can" style="font-size: 40px; color: #d32f2f; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 20px; color: #333;">Intérieur Propre & Frais</h3>
+            <p style="font-size: 14px; color: #666;">Chaque voiture est soigneusement nettoyée et désinfectée avant la livraison pour votre confort.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+            <i class="fas fa-bath" style="font-size: 40px; color: #d32f2f; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 20px; color: #333;">Lavage Avant Chaque Location</h3>
+            <p style="font-size: 14px; color: #666;">Profitez d’une voiture impeccable et fraîchement lavée à chaque location.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+            <i class="fas fa-headset" style="font-size: 40px; color: #d32f2f; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 20px; color: #333;">Service Client Fiable</h3>
+            <p style="font-size: 14px; color: #666;">Notre équipe est toujours disponible pour vous assister et garantir une expérience sans souci.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px;">
+            <i class="fas fa-hand-holding-usd" style="font-size: 40px; color: #d32f2f; margin-bottom: 10px;"></i>
+            <h3 style="font-size: 20px; color: #333;">Tarifs Compétitifs</h3>
+            <p style="font-size: 14px; color: #666;">Des prix abordables et sans frais cachés—un service de qualité au meilleur rapport qualité-prix.</p>
+        </div>
+
+    </div>
+</section>
+<section id="choix" style="padding: 60px 20px; text-align: center; color: white; position: relative;">
+    <!-- Calque semi-transparent pour l'image de fond -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+    <!-- Contenu de la section -->
+    <div class="choix-content" style="position: relative; z-index: 2;">
+        <h2 style="font-size: 36px; font-weight: bold; color: #D84040; text-transform: uppercase; margin-bottom: 20px;">
+            UN CHOIX VARIÉ DE VOITURES
+        </h2>
+        <p style="font-size: 18px; color: #ffffff; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+            Chez Ajitekry Car, nous offrons un large choix de voitures pour répondre à tous vos besoins. Que vous recherchiez une voiture économique, un SUV spacieux ou un véhicule de luxe, nous avons ce qu'il vous faut.
+        </p>
+        <div style="margin-top: 30px;">
+            <a href="vehicles.html" class="btn">
+                DÉCOUVRIR NOS VÉHICULES
+            </a>
+        </div>
+    </div>
+
+    <!-- Image de fond -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/images/1.jpg') no-repeat center center/cover; z-index: 0;"></div>
+</section>
+
+<section id="marques" style="padding: 60px 20px; background: #f9f9f9; text-align: center;">
+    <div class="marques-content" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-size: 36px; font-weight: bold; color: #D84040; text-transform: uppercase; margin-bottom: 20px;">
+            MARQUES DE VOITURES - LOCATION VOITURES OU MAROC
+        </h2>
+        <p style="font-size: 18px; color: #333; line-height: 1.6; max-width: 800px; margin: 0 auto 40px;">
+            Découvrez notre parc de voitures composé de marques renommées et de véhicules de tout type.
+        </p>
+
+        <!-- Liste des marques -->
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center;">
+            <img src="assets/images/55.png" alt="Renault" style="width: 120px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;">
+            <img src="assets/images/44.png" alt="Jeep" style="width: 120px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;">
+            <img src="assets/images/22.jpg" alt="Hyundai" style="width: 120px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;">
+           
+        </div>
+
+        <p style="font-size: 18px; color: #333; line-height: 1.6; margin-top: 40px;">
+            ET BIEN D'AUTRES VOITURES DE TOUT TYPE
+        </p>
+    </div>
+</section>
+<style>
+    .car-card {
+        width: 320px;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .car-image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .car-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Assombri légèrement l'image */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .car-overlay h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #D84040;
+        color: #101820;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #8c8989;
+    }
+    .marques-content img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marques-content img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+</style>
+
+<footer style="background: #000000; color: white; padding: 60px 20px; text-align: left; font-size: 18px;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: auto;">
+
+        <div style="max-width: 350px;">
+            <img src="assets/images/logo2.png" alt="AJITEKRY CAR" style="max-width: 220px; margin-bottom: 20px;">
+            <p style="color: #b0b0b0; line-height: 1.6;">
+                Découvrez l'excitation de la route et la liberté d'explorer notre gamme variée de véhicules de location de qualité supérieure, à Casablanca.
+            </p>
+            <p style="color: #b0b0b0; font-weight: bold;">
+                <i class="fas fa-clock" style="color: #d32f2f;"></i> Disponible 24/24h, 7/7 jours
+            </p>
+        </div>
+
+        
+        <div>
+            <h3 style="color: #fff; font-size: 22px; font-weight: bold; margin-bottom: 15px;">MENU DE NAVIGATION</h3>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="index.html" style="color: #b0b0b0; text-decoration: none;">Accueil</a></li>
+                <li><a href="apropos.html" style="color: #b0b0b0; text-decoration: none;">À Propos</a></li>
+                <li><a href="vehicles.html" style="color: #b0b0b0; text-decoration: none;">Nos véhicules</a></li>
+                <li><a href="contact.html" style="color: #b0b0b0; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 style="color: #fff; font-size: 22px; font-weight: bold; margin-bottom: 15px;">CONTACTEZ-NOUS</h3>
+            <p style="color: #b0b0b0; line-height: 1.6;">N 11 HEY NAHDA 1 RUE MEKNES OULED TEIMA </p>
+            <p style="color: #d32f2f; font-weight: bold; font-size: 20px;">
+                <i class="fas fa-phone-alt"></i> +212 661-690-035
+            </p>
+            <p style="color: #d32f2f; font-weight: bold; font-size: 20px;">
+                <i class="fas fa-phone-alt"></i> +212 601-649-501
+            </p>
+            <p style="color: #b0b0b0; font-size: 18px;">
+                <i class="fas fa-envelope"></i> ajitekri201@gmail.com
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div style="text-align: center; border-top: 1px solid #1f2f35; margin-top: 30px; padding-top: 20px; font-size: 16px; color: #b0b0b0;">
+        © 2024 AJITEKRY CAR - Tous droits réservés
+    </div>
+</footer>
+
+</body>
+</html>
