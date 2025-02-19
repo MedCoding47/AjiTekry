@@ -58,6 +58,9 @@ nav ul li a {
 
 /* Section Hero avec image de fond */
 .hero {
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -72,7 +75,7 @@ nav ul li a {
 }
 
 .hero h1 {
-    font-size: 2.5rem; /* Taille de police réduite pour les petits écrans */
+    font-size: 5vw; /* Taille de police réduite pour les petits écrans */
     margin: 10px 0;
 }
 
@@ -139,6 +142,13 @@ nav ul li a {
     margin-top: 20px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+
 /* Style du footer */
 footer {
     text-align: center;
@@ -183,6 +193,7 @@ footer {
 
     .menu-icon {
         display: block;
+        cursor: pointer;
     }
     
     .nav-links {
@@ -194,12 +205,12 @@ footer {
         background: rgba(0, 0, 0, 0.9);
         width: 100%;
         text-align: center;
-        padding: 10px 0;
     }
     
     .nav-links.active {
         display: flex;
     }
+    
     
     .nav-links li {
         margin: 10px 0;
