@@ -3,52 +3,56 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 100%;
-    font-size: 16px; /* Taille de base pour les unités rem */
 }
 
-/* Style du header avec image de fond */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Réduire le padding sur les petits écrans */
-    background: url('assets/images/1.jpg') no-repeat center center/cover;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
     color: white;
-    height: 60px; /* Réduire la hauteur sur les petits écrans */
 }
 
-.logo img {
-    height: 35px; /* Réduire la taille du logo sur les petits écrans */
+.logo-container {
+    background: rgba(255, 255, 255, 0.5); /* White background with opacity */
+    padding: 10px; /* Padding around the logo */
+    border-radius: 10px; /* Rounded corners for the background */
+}
+
+.logo-container img {
+    height: 40px;
+    border-radius: 10px; /* Rounded corners for better aesthetics */
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 50px;
     margin: 0;
     display: flex;
 }
 
 nav ul li {
-    margin: 0 10px; /* Réduire l'espacement entre les éléments du menu */
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #EEEE;
+    color: white;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
-    font-size: 0.9rem; /* Taille de police plus petite sur les petits écrans */
 }
 
-/* Effet hover sur les liens de navigation */
-nav ul li a:hover {
-    color: #D84040; /* Changement de couleur au survol */
+/* Menu Hamburger */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Section Hero avec image de fond */
@@ -96,6 +100,44 @@ nav ul li a:hover {
     background-color: #e08e1d;
 }
 
+#about {
+    padding: 60px 10px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-description {
+    flex: 2;
+}
+
+.about-description p {
+    text-align: justify;
+}
+
+.about-description .btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #cd343b;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
 /* Style du footer */
 footer {
     text-align: center;
@@ -106,7 +148,6 @@ footer {
 }
 
 /* Media Queries pour le responsive design */
-
 /* Pour les écrans de taille moyenne (tablettes) */
 @media (max-width: 768px) {
     header {
@@ -123,7 +164,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2rem; /* Taille de police réduite */
+        font-size: 1.5rem; /* Taille de police réduite */
     }
 
     .hero h3 {
@@ -137,6 +178,59 @@ footer {
     .btn {
         font-size: 0.9rem; /* Taille de police réduite */
         padding: 8px 16px; /* Réduire le padding */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center; /* Center align items */
+    }
+
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%; /* Ensure full width */
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+        margin-left: 35px;
+    }
+
+    .about-description {
+        font-size: 0.9rem;
+        width: 100%; /* Ensure full width */
+        margin-left: 0px;
+    }
+
+    .about-description .btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        margin-top: 20px;
     }
 }
 
@@ -180,5 +274,22 @@ footer {
     footer {
         padding: 10px; /* Réduire le padding */
         font-size: 0.8rem; /* Taille de police réduite */
+    }
+
+    .about-content {
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .about-text h2 {
+        font-size: 1.3rem; /* Further reduce font size for smaller screens */
+    }
+
+    .about-description {
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+    }
+
+    .about-description .btn {
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+        padding: 8px 12px; /* Adjust padding for smaller screens */
     }
 }
