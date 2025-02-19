@@ -230,13 +230,13 @@ footer {
 
     .about-text h2 {
         font-size: 1.5rem;
-        margin-left: 35px;
+        margin-left: 0px;
     }
 
     .about-description {
         font-size: 0.9rem;
         width: 100%; /* Ensure full width */
-        margin-left: 0px;
+        margin-left: 5px;
     }
 
     .about-description .btn {
@@ -297,7 +297,9 @@ footer {
     }
 
     .about-description {
-        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+        font-size: 0.8rem;
+        margin-left: 0px;
+        padding: 0px; /* Further reduce font size for smaller screens */
     }
 
     .about-description .btn {
