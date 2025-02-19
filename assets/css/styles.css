@@ -53,6 +53,7 @@ nav ul li a {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    padding-right: 30px;
 }
 
 /* Section Hero avec image de fond */
